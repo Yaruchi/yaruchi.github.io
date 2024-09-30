@@ -1,0 +1,192 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #000;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.head-name {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Hide the checkbox input */
+#menu-toggle {
+    display: none;
+}
+
+/* Nav Links for desktop */
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #a5ce5f;
+}
+
+/* Hamburger Menu Icon Styling */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 4px;
+    background: white;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+/* Hide the nav menu initially for mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        text-align: center;
+    }
+
+    /* Show the hamburger icon */
+    .hamburger-menu {
+        display: flex;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    /* Show the nav-links when the checkbox is checked */
+    #menu-toggle:checked + .hamburger-menu + .nav-links {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+}
+
+/* Home Section Styling */
+.home-section {
+    height: 100vh;
+    background-image: url('background.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    margin-top: 0; /* For the fixed navbar */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2em;
+    border: 2px solid white;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+/* Group Section Styling */
+.group-section {
+    padding: 2em;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+/* About Section Styling */
+.about-section {
+    padding: 2em;
+    background-color: #f5f5f5;
+    text-align: center;
+    
+}
+
+.about-img {
+    width: 100%; /* Image scales to fit the container */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Section */
+.project-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.works-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    gap: 50px; /* Adds space between images */
+    padding: 0 20px; /* Prevents images from touching the edges */
+}
+
+.work-item {
+    max-width: 300px;
+    width: 100%; /* Ensures images are responsive */
+    text-align: center;
+}
+
+.project-img {
+    width: 100%; /* Image scales to fit the container */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
