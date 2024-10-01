@@ -158,7 +158,7 @@ p {
 }
 
 .about-img {
-    width: 100%; /* Image scales to fit the container */
+    width: 50%; /* Image scales to fit the container */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
